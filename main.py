@@ -103,7 +103,7 @@ async def main():
         # connect to websocket
         options: LiveOptions = LiveOptions(
             model="nova-2",
-            language="en-US",
+            language="en-IN",
             # Apply smart formatting to the output
             smart_format=True,
             # Raw audio format deatils

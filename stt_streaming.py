@@ -8,9 +8,6 @@ from deepgram import (
     LiveTranscriptionEvents,
     Microphone,
 )
-from dotenv import load_dotenv
-
-load_dotenv()
 
 from llm import translate
 from voice_synthesis import gen_dub
@@ -128,7 +125,6 @@ async def stt_main(input_language: str, output_language: str) -> None:
             "no_delay": "true"
         }
 
-        print("\n\nStart talking! Press Ctrl+C to stop...\n")
         if await dg_connection.start(options, addons=addons) is False:
             print("Failed to connect to Deepgram")
             return
